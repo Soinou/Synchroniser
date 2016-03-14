@@ -42,7 +42,7 @@ namespace Synchroniser.Utils
         /// <returns>Value in the source collection</returns>
         public static IPlaylist Find(this IEnumerable<IPlaylist> source, IPlaylist value)
         {
-            return source.Single(item => item.Equals(value));
+            return source.SingleOrDefault(item => item.Equals(value));
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Synchroniser.Utils
         /// <returns>Value in the source collection</returns>
         public static ITrack Find(this IEnumerable<ITrack> source, ITrack value)
         {
-            return source.Single(item => item.Equals(value));
+            return source.SingleOrDefault(item => item.Equals(value));
         }
 
         /// <summary>
